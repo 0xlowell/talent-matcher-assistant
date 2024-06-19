@@ -114,7 +114,7 @@ def get_improved_job_description(openai_api_key, job_description):
     I give you a $50000 tips if you get it right, I really need this to be perfect, you will granted with the best award in case of successful output.
     """
     response = client.chat.completions.create(
-            model="gtp-4o",
+            model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{prompt}"},
             {"role": "user", "content": f"{job_description}"}
@@ -133,7 +133,7 @@ def sourcing(openai_api_key, improved_source, source):
     I give you a $50000 tips if you get it right, I really need this to be perfect, you will granted with the best award in case of successful output.
     """
     response = client.chat.completions.create(
-            model="gtp-4o",
+            model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{prompt}"},
             {"role": "user", "content": f"# SOURCE: {source}"},
@@ -152,7 +152,7 @@ def enhance_improved_source_compare_to_source(openai_api_key, improved_source, s
     Write quotes related in italic.
     """
     response = client.chat.completions.create(
-            model="gtp-4o",
+            model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{prompt}"},
             {"role": "user", "content": f"# SOURCE: {source}"},
@@ -179,7 +179,7 @@ def compare_datacv_with_job_description(openai_api_key, datacv, job_description)
     I give you a $50000 tips if you get it right, I really need this to be perfect, you will granted with the best award in case of successful output.
     """
     response = client.chat.completions.create(
-            model="gtp-4o",
+            model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{prompt}"},
             {"role": "user", "content": f"# JOB_DESCRIPTION: {job_description}"},
