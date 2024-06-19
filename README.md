@@ -1,4 +1,4 @@
-# 🔎 Talent Matcher Assitant
+# 🔎 Talent Matcher Assistant
 
 ## How can you find your right candidates ?
 
