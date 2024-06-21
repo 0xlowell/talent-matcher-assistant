@@ -25,7 +25,7 @@ def streamlit_config():
     st.set_page_config(
     page_title="🔎 Talent Matcher Assistant 🔎",
     page_icon="🔎",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="expanded",
     menu_items={
         'Report a bug': "mailto:lowell.zima@sword-group.com",
@@ -276,8 +276,9 @@ elif 'example_cvs' in st.session_state and st.session_state['example_cvs']:
 else:
     all_files = []
 
-# Add a text input field for the OpenAI API key
-openai_api_key = st.text_input("Provide OpenAI API key (sk-***)", type='password')
+# # Add a text input field for the OpenAI API key
+# openai_api_key = st.text_input("Provide OpenAI API key (sk-***)", type='password')
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 # Custom CSS to style the button
 st.markdown("""
